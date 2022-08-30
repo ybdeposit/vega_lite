@@ -159,7 +159,7 @@ defmodule VegaLite.Export do
             "#{fn_name} requires Node.js and npm to be installed and available in PATH"
     end
 
-    local_bin = npm_bin(npm_path)
+    local_bin = npm_bin(npm_path, ["--prefix", "assets"])
     global_bin = npm_bin(npm_path, ["--global"])
 
     [local_bin, global_bin]
